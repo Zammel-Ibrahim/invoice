@@ -45,10 +45,6 @@ resource "aws_security_group" "demo-cluster" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags {
-    Name = "terraform-eks-demo"
-  }
 }
 
 resource "aws_security_group_rule" "demo-cluster-ingress-node-https" {
