@@ -59,7 +59,7 @@ resource "aws_security_group" "demo-node" {
   }
 
   tags = "${
-    map(
+    tomap(
      "Name", "terraform-eks-demo-node",
      "kubernetes.io/cluster/${var.cluster-name}", "owned",
     )
