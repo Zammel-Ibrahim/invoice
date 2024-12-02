@@ -57,14 +57,6 @@ resource "aws_security_group" "demo-node" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  
-   tags = "${
-    tomap({
-      Name                             = "terraform-eks-demo-node"
-     "kubernetes.io/cluster/${var.cluster-name}" = "owned"
-   })
-   }
 }
 
 resource "aws_security_group_rule" "demo-node-ingress-self" {
