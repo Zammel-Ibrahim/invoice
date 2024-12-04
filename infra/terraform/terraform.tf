@@ -27,7 +27,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         	   = "eks-terraform-iza-23-02-1988"
+    bucket         	   = "eks-terraform-iza-23-02-1988-01"
     key              	   = "state/terraform.tfstate"
     region         	   = "us-east-1"
   }
