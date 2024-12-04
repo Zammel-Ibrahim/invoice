@@ -9,7 +9,7 @@ export const BASE_URL =
 
 export const WEBSITE_URL = import.meta.env.PROD
   ? 'http://cloud.idurarapp.com/'
-  : 'http://a2d56ebb7da1848bf9f89458264927aa-559525149.us-east-1.elb.amazonaws.com:3000/';
+  : 'http://react-js-service:3000/';
 export const DOWNLOAD_BASE_URL =
   import.meta.env.PROD || import.meta.env.VITE_DEV_REMOTE
     ? import.meta.env.VITE_BACKEND_SERVER + 'download/'
