@@ -1,19 +1,19 @@
 export const API_BASE_URL =
   import.meta.env.PROD || import.meta.env.VITE_DEV_REMOTE == 'remote'
     ? import.meta.env.VITE_BACKEND_SERVER + 'api/'
-    : 'http://localhost:8888/api/';
+    : 'http://node-js-service:4000/api/';
 export const BASE_URL =
   import.meta.env.PROD || import.meta.env.VITE_DEV_REMOTE
     ? import.meta.env.VITE_BACKEND_SERVER
-    : 'http://localhost:8888/';
+    : 'http://node-js-service:4000/';
 
 export const WEBSITE_URL = import.meta.env.PROD
   ? 'http://cloud.idurarapp.com/'
-  : 'http://localhost:3000/';
+  : 'http://a2d56ebb7da1848bf9f89458264927aa-559525149.us-east-1.elb.amazonaws.com:3000/';
 export const DOWNLOAD_BASE_URL =
   import.meta.env.PROD || import.meta.env.VITE_DEV_REMOTE
     ? import.meta.env.VITE_BACKEND_SERVER + 'download/'
-    : 'http://localhost:8888/download/';
+    : 'http://node-js-service:4000/download/';
 export const ACCESS_TOKEN_NAME = 'x-auth-token';
 
 export const FILE_BASE_URL = import.meta.env.VITE_FILE_BASE_URL;

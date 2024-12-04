@@ -1,0 +1,38 @@
+global:
+  storageClass: "ebs-gp3"
+
+image:
+  registry: docker.io
+  repository: bitnami/mongodb
+  tag: latest
+  pullPolicy: IfNotPresent
+
+auth:
+  enabled: true
+  rootUser: admin
+  rootPassword: admin
+
+replicaSet:
+  enabled: false
+
+persistence:
+  enabled: true
+  storageClass: "ebs-gp3"
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
+
+service:
+  type: ClusterIP
+  port: 27017
+
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 250m
+  limits:
+    memory: 512Mi
+    cpu: 500m
+
+metrics:
+  enabled: false

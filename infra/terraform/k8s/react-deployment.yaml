@@ -15,6 +15,7 @@ spec:
       containers:
       - name: react-js
         image: izammel/crm-react-js
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "356Mi"
@@ -29,7 +30,7 @@ kind: Service
 metadata:
   name: react-js-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: react-js
   ports:

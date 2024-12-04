@@ -15,6 +15,7 @@ spec:
       containers:
       - name: node-js
         image: izammel/crm-node-js
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "356Mi"
@@ -29,7 +30,7 @@ kind: Service
 metadata:
   name: node-js-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: node-js
   ports:
